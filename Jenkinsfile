@@ -10,19 +10,19 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t myapp:latest .'
+                sh 'docker build -t zomato-app:latest .'
             }
         }
 
         stage('Stop Old Container') {
             steps {
-                sh 'docker rm -f myapp-container || true'
+                sh 'docker rm -f zomato-container || true'
             }
         }
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d -p 3000:3000 --name myapp-container myapp:latest'
+                sh 'docker run -d -p 5000:5000 --name zomato-container zomato-app:latest'
             }
         }
     }
