@@ -1,14 +1,13 @@
-cat > package.json <<'EOF'
 {
-  "name": "zomato-clone",
+  "name": "zomato-app",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "Zomato app with foodlist",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.18.2"
   }
 }
-EOF
 
